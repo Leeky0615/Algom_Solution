@@ -1,4 +1,4 @@
-package DFS와BFS.토마토_7576.홍은서;
+package DFS와BFS.S1_토마토_7576.홍은서;
 
 import java.io.BufferedReader;
 import java.io.IOException;
