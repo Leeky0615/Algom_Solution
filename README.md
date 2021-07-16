@@ -6,6 +6,7 @@
 |:------:|:---:|:---:|:---:|
 |1|[이규연](https://github.com/Leeky0615)|python|[![Solved.ac프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=rbdus7174)](https://github.com/mazassumnida/mazassumnida)|
 |2|[홍은서](https://github.com/jelly-boop)|java|[![Solved.ac프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=jelly_boop)](https://github.com/mazassumnida/mazassumnida)|
+|3|[황태희](https://github.com/aaliyahee)|c|[![Solved.ac프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=ooakt)](https://github.com/mazassumnida/mazassumnida)
 
 <br/><br/>
 
