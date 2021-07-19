@@ -3,6 +3,7 @@ package DFS와BFS.S1_토마토_7576.홍은서;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
@@ -29,7 +30,7 @@ public class 토마토_7576 {
     }
 
     private static void bfs(int[][] map, int N, int M) {
-        Queue<Point> queue=new LinkedList<>();
+        Queue<Point> queue= new LinkedList<>();
         for(int i=0;i<N;i++){
             for(int j=0;j<M;j++){
                 if(map[i][j]==1){//토마토가 담긴 위치를 큐에 넣는다.
