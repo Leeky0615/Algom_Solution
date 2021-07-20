@@ -7,7 +7,5 @@ while True:
         break
     s = inputs[1:]
     for i in combinations(s, 6):
-        for j in i:
-            print(j, end=' ')
-        print()
+        print(*i)
     print()

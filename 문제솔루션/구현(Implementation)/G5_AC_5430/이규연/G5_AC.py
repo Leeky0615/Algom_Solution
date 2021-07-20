@@ -1,9 +1,9 @@
 for _ in range(int(input())):
     p = input()
     s = int(input())
-    arr = input()[1:-1].split(',')
+    result = input()[1:-1].split(',')
     if s == 0:
-        arr = []
+        result = []
     rStatus = False
     start = 0
     end = 0
@@ -16,7 +16,7 @@ for _ in range(int(input())):
             start += 1
 
     if start + end <= s:
-        result = arr[start:s - end]
+        result = result[start:s - end]
         if rStatus:
             print('[' + ','.join(result[::-1]) + ']')
         else:
