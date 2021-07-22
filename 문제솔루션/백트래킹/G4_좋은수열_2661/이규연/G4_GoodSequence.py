@@ -10,11 +10,11 @@ def checkSequence(count):
 
 
 def backTracking(count):
+    if not checkSequence(count):  # 좋은 수열인지 체크
+        return False  # 좋은 수열이 아닌 경우 False를 리턴한다.
     if count == n:  # 입력값(n)과 단계가 같으면 수열을 출력
         print(*result, sep='')
         return True
-    if not checkSequence(count):  # 좋은 수열인지 체크
-        return False  # 좋은 수열이 아닌 경우 False를 리턴한다.
     for i in range(1, 4):  # 1,2,3을 순차적으로 체크 -> 크기가 작은 수열을 출력해야하므로 1부터 체크
         result.append(i)  # 결과값에 추가
         if backTracking(count + 1):  # i가 추가된 상태에서 다음 단계 실행
