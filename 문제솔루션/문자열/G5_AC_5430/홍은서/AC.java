@@ -1,9 +1,8 @@
-package 문자열.S5_AC_5430.홍은서;
+package 문자열.G5_AC_5430.홍은서;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.nio.Buffer;
 import java.util.*;
 
 public class AC {
