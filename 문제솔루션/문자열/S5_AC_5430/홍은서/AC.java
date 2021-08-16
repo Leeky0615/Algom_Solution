@@ -10,64 +10,60 @@ public class AC {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int T = Integer.parseInt(br.readLine());
-        StringTokenizer st;
-        StringBuilder sb = new StringBuilder();
+        boolean right = false;
 
-        while(T --> 0){
-            String[] orders= br.readLine().split("");
+        boolean error=false;
+        StringBuilder sb= new StringBuilder();;
+        while (T-->0){
+            String [] orders = br.readLine().split("");
             int n = Integer.parseInt(br.readLine());
-            String [] s = br.readLine().split("");
-            Deque<Integer> deque = new LinkedList<>();
-            boolean right = true; // 방향결정
-             sb = new StringBuilder();
+            String [] numbers = br.readLine().split("");
+            Deque<String> deque = new LinkedList<>();
 
-            for(String i: s){ // 덱에 숫자만 넣음
-                if(!i.equals("[") && !i.equals("]") && !i.equals(",")){
-                    deque.add(Integer.parseInt(i));
+            for(int i=0; i<numbers.length; i++){
+                if(!numbers[i].equals("[") && !numbers[i].equals("]") &&
+                        !numbers[i].equals(",") ){
+                    deque.addFirst(numbers[i]);
                 }
             }
 
-            for(String order: orders){ // 명령어 처리
-                if(order.equals("R")){ // 뒤집기
-                    // 여기서 방향만 바꿔줌ㅋ
+            for(String s: orders){
+                if(s.equals("R")){
                     if(right){
-                        right = false;
+                        right=false;
                     }else{
-                        right = true;
+                        right=true;
                     }
-
-                }else{ // 맨 앞 제거
+                }else{
                     if(deque.isEmpty()){
-                        System.out.println("error");
+                       error=true;
                         break;
                     }else{
                         if(right){
                             deque.pollFirst();
                         }else{
-                            deque.pollLast();
+                            deque.pollFirst();
                         }
                     }
                 }
             }
-            sb.append("[");
-            if(deque.size()>0){
+            if(error){
+                sb.append("error").append("\n");
+            }else{
                 if(right){
-                    sb.append(deque.pollFirst());
                     while (!deque.isEmpty()){
-                        sb.append(',').append(deque.pollFirst());
+                        sb.append(deque.pollLast()).append(",");
                     }
                 }else{
-                    sb.append(deque.pollLast());
                     while (!deque.isEmpty()){
-                        sb.append(',').append(deque.pollLast());
+                        sb.append(deque.pollFirst()).append(",");
                     }
                 }
             }
-            sb.append(']').append('\n');
-
+            sb.append("]");
 
         }
-
         System.out.println(sb);
+
     }
 }
