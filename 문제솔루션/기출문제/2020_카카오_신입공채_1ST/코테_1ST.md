@@ -1,9 +1,5 @@
 # 📌 [2021 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/72410?language=python3)
 
-- 📚 문제 유형 : 구현, 그래프이론, 그래프 탐색, BFS
-- 📚 문제 등급 : GOLD 4
-  <br/><br/>
-
 # 📌 문제
 
 <div style="font-size: 17px">
