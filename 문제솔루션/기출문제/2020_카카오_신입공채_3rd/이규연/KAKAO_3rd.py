@@ -16,7 +16,6 @@ def solution(info, query):
                         key += i[idx]
                     else:
                         key += '-'
-                print(key)
                 if key in dict.keys():
                     dict[key].append(int(i[-1]))
                 else:
@@ -25,19 +24,14 @@ def solution(info, query):
     for key in dict:
         dict[key].sort()
 
-    print(dict)
     query = [i.replace('and ', '').replace(' ', '') for i in query]
     for q in query:
-        score = re.sub('[^0-9]', '', q)
+        score = int(re.sub('[^0-9]', '', q))
         target = re.sub('[0-9]', '', q)
         if target in dict.keys():
-            # 키가 있는 경우 찾아서 넣기 이떄 이분탐색 사용@@@@@@@
-            # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-            count = 0
-            answer.append(count)
+            answer.append(len(dict[target]) - bisect_left(dict[target], score))
         else:
             answer.append(0)
-    print(query)
 
     return answer
 
