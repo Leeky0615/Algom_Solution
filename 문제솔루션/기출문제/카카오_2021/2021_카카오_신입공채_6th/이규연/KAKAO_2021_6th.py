@@ -34,7 +34,7 @@ dy = [0, 1, 0, -1]
 #     q = deque()
 #     q.append(p1)
 # while q:
-#     y, x = q.popleft()
+#     y, x = q.popleft()ㅜㅂ
 #     visited[y][x] = True
 #     for i in range(4):
 #         nx = x + dx[i]
